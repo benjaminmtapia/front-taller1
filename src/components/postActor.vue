@@ -1,23 +1,8 @@
 <template>
   <div>
-    <table class="table table-bordered table-hover">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="actor in actors" v-bind:key="actor">
-          <th>{{actor.actor_id}}</th>
-          <th>{{actor.first_name}}</th>
-          <td>{{actor.last_name}}</td>
-          <td>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <section class="form">
+
+    </section>
   </div>
 </template>
 
@@ -35,7 +20,7 @@ export default {
     };
   },
   methods: {
-    getActors(){
+    postActor(actor){
       apiService.getActors().then((data) => {
         this.actors = data;
         this.numberOfActors = data.count;
@@ -49,3 +34,4 @@ export default {
 }
 
 </script>
+getActorsgetActors
