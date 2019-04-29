@@ -1,6 +1,6 @@
 <template>
   <div>
-    <table class="table table-bordered table-hover">
+    <!--<table class="table table-bordered table-hover"
       <thead>
         <tr>
           <th>#</th>
@@ -17,7 +17,45 @@
           </td>
         </tr>
       </tbody>
-    </table>
+    </table>-->
+
+    <vs-table max-items="10" pagination :data="actors">
+      <template slot="header">
+        <h3>
+          Actores
+        </h3>
+      </template>
+      <template slot="thead">
+        <vs-th>
+          #
+        </vs-th>
+        <vs-th>
+          Nombre
+        </vs-th>
+        <vs-th>
+          Apellido
+        </vs-th>
+      </template>
+
+      <template slot-scope="{data}">
+        <vs-tr :key="indextr" v-for="(tr, indextr) in data" >
+          <vs-td :data="data[indextr].actor_id">
+            {{data[indextr].actor_id}}
+          </vs-td>
+
+          <vs-td :data="data[indextr].first_name">
+            {{data[indextr].first_name}}
+          </vs-td>
+
+          <vs-td :data="data[indextr].last_name">
+            {{data[indextr].last_name}}
+          </vs-td>
+
+        </vs-tr>
+      </template>
+    </vs-table>
+
+
   </div>
 </template>
 
