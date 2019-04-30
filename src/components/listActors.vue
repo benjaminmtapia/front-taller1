@@ -3,7 +3,7 @@
     <vs-table max-items="10" pagination :data="actors">
       <template slot="header">
         <h3>
-          Lista de actores
+          Actors list
         </h3>
       </template>
       <template slot="thead">
@@ -11,10 +11,10 @@
           #
         </vs-th>
         <vs-th>
-          Nombre
+          First name
         </vs-th>
         <vs-th>
-          Apellido
+          Last name
         </vs-th>
       </template>
 
@@ -42,24 +42,27 @@
                   <vs-table max-items="5" pagination :data="data[indextr].films">
                     <template slot="header">
                       <h3>
-                        Lista de peliculas
+                        Movies list
                       </h3>
                     </template>
                     <template slot="thead">
                       <vs-th>
-                        Título
+                        Title
                       </vs-th>
                       <vs-th>
-                        Descripción
+                        Description
                       </vs-th>
                       <vs-th>
-                        Año de publicación
+                        Release year
                       </vs-th>
                       <vs-th>
-                        Clasificación
+                        Rating
                       </vs-th>
                       <vs-th>
-                        Extras
+                        Special features
+                      </vs-th>
+                      <vs-th>
+                        Length
                       </vs-th>
                     </template>
 
@@ -82,6 +85,9 @@
                         </vs-td>
                         <vs-td :data="data[indextr].special_features">
                           {{data[indextr].special_features}}
+                        </vs-td>
+                        <vs-td :data="data[indextr].length">
+                          {{data[indextr].length}}
                         </vs-td>
                       </vs-tr>
                     </template>
