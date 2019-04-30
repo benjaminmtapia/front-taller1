@@ -1,37 +1,55 @@
 <template>
-  <div>
-    <section class="form">
+    <div class="columns" id="agregarActor">
+      <div class="column is-two-thirds">
+      <section class="section">
+        <h1 class="title">Agregar actor</h1>
 
-    </section>
+        <section class="form">
+          <div class="field">
+            <label class="label">First name</label>
+            <div class="control">
+              <input name="name" 
+                v-model="form.name"  
+                class="input" type="text" placeholder="First name">
+            </div> 
+          </div>
+
+          <div class="field">
+            <label class="label">Last name</label>
+            <div class="control">
+              <input name="name" 
+                v-model="form.name"  
+                class="input" type="text" placeholder="Last name">
+            </div> 
+          </div>
+        
+          
+          
+        </section>
+      </section>
+    </div>
   </div>
 </template>
 
 <script>
-import {APIService} from '../APIService';
+  import {APIService} from '../APIService';
+  const API_URL = 'http://localhost:8081';
+  const apiService = new APIService();
 
-const API_URL = 'http://localhost:8081';
-const apiService = new APIService();
+  export default {
+    props: ['postId'],
 
-export default {
-  data(){
-    return {
-      actors: [],
-      numberOfActors:0,
-    };
-  },
-  methods: {
-    postActor(actor){
-      apiService.getActors().then((data) => {
-        this.actors = data;
-        this.numberOfActors = data.count;
-      });
+    data() {
+      return {
+        firstName: '',
+        lastName: ''
+      }
+    },
+
+    methods: {
+      onSubmit() {
+        apiService.createActor('actor', {actor: this.actor, id: this.postId}).then(post => this.$emit('completed', actor));
+      }
     }
-  },
-
-  mounted() {
-    this.getActors();
-  },
-}
-
+  }
 </script>
-getActorsgetActors
