@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <listActors/>
+    <postActor/>
   </div>
 </template>
 
@@ -12,12 +13,13 @@ import 'material-icons/iconfont/material-icons.css';
 Vue.use(Vuesax)
 
 import listActors from './components/listActors.vue'
-//import postActor from './components/postActor.vue'
+import postActor from './components/postActor.vue'
 
 export default {
   name: 'app',
   components: {
-    listActors
+    listActors,
+    postActor
   }
 }
 </script>

@@ -42,8 +42,7 @@
     data() {
       return {
         firstName: '',
-        lastName: '',
-        actor: [firstName, lastName]
+        lastName: ''
       }
     },
 

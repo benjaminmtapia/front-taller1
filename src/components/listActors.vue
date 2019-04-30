@@ -38,45 +38,56 @@
 
 
               <template>
-  <div>
-    <vs-table max-items="5" pagination :data="actors">
-      <template slot="header">
-        <h3>
-          Lista de peliculas
-        </h3>
-      </template>
-      <template slot="thead">
-        <vs-th>
-          #
-        </vs-th>
-        <vs-th>
-          Nombre
-        </vs-th>
-        <vs-th>
-          Apellido
-        </vs-th>
-      </template>
+                <div>
+                  <vs-table max-items="5" pagination :data="data[indextr].films">
+                    <template slot="header">
+                      <h3>
+                        Lista de peliculas
+                      </h3>
+                    </template>
+                    <template slot="thead">
+                      <vs-th>
+                        Título
+                      </vs-th>
+                      <vs-th>
+                        Descripción
+                      </vs-th>
+                      <vs-th>
+                        Año de publicación
+                      </vs-th>
+                      <vs-th>
+                        Clasificación
+                      </vs-th>
+                      <vs-th>
+                        Extras
+                      </vs-th>
+                    </template>
 
-      <template slot-scope="{data}">
-        <vs-tr :key="indextr" v-for="(tr, indextr) in data" >
-          <vs-td :data="data[indextr].actor_id">
-            {{data[indextr].actor_id}}
-          </vs-td>
+                    <template slot-scope="{data}">
+                      <vs-tr :key="indextr" v-for="(tr, indextr) in data" >
+                        <vs-td :data="data[indextr].title">
+                          {{data[indextr].title}}
+                        </vs-td>
 
-          <vs-td :data="data[indextr].first_name">
-            {{data[indextr].first_name}}
-          </vs-td>
+                        <vs-td :data="data[indextr].description">
+                          {{data[indextr].description}}
+                        </vs-td>
 
-          <vs-td :data="data[indextr].last_name">
-            {{data[indextr].last_name}}
-          </vs-td>
-        </vs-tr>
-      </template>
-    </vs-table>
+                        <vs-td :data="data[indextr].release_year">
+                          {{data[indextr].release_year}}
+                        </vs-td>
 
-
-  </div>
-</template>
+                        <vs-td :data="data[indextr].rating">
+                          {{data[indextr].rating}}
+                        </vs-td>
+                        <vs-td :data="data[indextr].special_features">
+                          {{data[indextr].special_features}}
+                        </vs-td>
+                      </vs-tr>
+                    </template>
+                  </vs-table>
+                </div>
+              </template>
 
 
 
