@@ -3,7 +3,7 @@
     <vs-table max-items="10" pagination :data="actors">
       <template slot="header">
         <h3>
-          Actors list
+          Actor list
         </h3>
       </template>
       <template slot="thead">
@@ -39,7 +39,7 @@
 
               <template>
                 <div>
-                  <vs-table max-items="5" pagination :data="data[indextr].films">
+                  <vs-table max-items="3" pagination :data="data[indextr].films">
                     <template slot="header">
                       <h3>
                         Movies list
@@ -95,30 +95,6 @@
                   </vs-table>
                 </div>
               </template>
-
-
-
-              <!--
-                <div class="con-btns-user">
-                <div class="con-userx">
-
-                  <vs-avatar :badge="tr.id" size="45px" :src="`https://randomuser.me/api/portraits/women/${indextr}.jpg`"/>
-                  <span>
-                    {{ tr.name }}
-                  </span>
-                </div>
-
-                <div>
-                  <vs-button vs-type="border" size="small" icon="phone_in_talk"></vs-button>
-                  <vs-button vs-type="gradient" size="small" color="success" icon="send"></vs-button>
-                  <vs-button vs-type="flat" size="small" color="danger" icon="delete_sweep"></vs-button>
-                </div>
-              </div>
-              <vs-list>
-                <vs-list-item icon="mail" title="Email" :subtitle="tr.email"></vs-list-item>
-                <vs-list-item icon="check" title="Website" :subtitle="tr.website"></vs-list-item>
-              </vs-list>
-              -->
             </div>
           </template>
 
@@ -192,5 +168,7 @@ export default {
   align:center;
   width:800px;
   float:center;
+  margin: 60px auto;
+  max-width: 1024px;
 }
 </style>

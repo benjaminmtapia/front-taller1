@@ -1,12 +1,12 @@
 <template lang="html">
   <div>
     <vs-tabs :color="colorx" alignment="center">
-      <vs-tab @click="colorx = 'success'" label="Lista de Actores">
+      <vs-tab @click="colorx = 'success'" label="Actor List">
         <div class="con-tab-ejemplo">
           <listActors/>
         </div>
       </vs-tab>
-      <vs-tab @click="colorx = 'success'" label="Agregar Actor">
+      <vs-tab @click="colorx = 'success'" label="Post Actor">
         <div class="con-tab-ejemplo">
           <postActor/>
         </div>

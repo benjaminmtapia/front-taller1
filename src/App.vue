@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     <div class="title">
-      Taller de Bases de Datos
+      <h2>Taller de Bases de Datos</h2>
     </div>
+    <div id="tabs">
     <tabs/>
+    </div>
   </div>
 </template>
 
