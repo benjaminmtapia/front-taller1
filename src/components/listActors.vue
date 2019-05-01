@@ -7,30 +7,30 @@
         </h3>
       </template>
       <template slot="thead">
-        <vs-th>
+        <vs-col vs-w="2">
           #
-        </vs-th>
-        <vs-th>
+        </vs-col>
+        <vs-col vs-w="3">
           First name
-        </vs-th>
-        <vs-th>
+        </vs-col>
+        <vs-col vs-w="3">
           Last name
-        </vs-th>
+        </vs-col>
       </template>
 
       <template slot-scope="{data}">
         <vs-tr :key="indextr" v-for="(tr, indextr) in data" >
-          <vs-td :data="data[indextr].actor_id">
+          <vs-col vs-w="2" :data="data[indextr].actor_id">
             {{data[indextr].actor_id}}
-          </vs-td>
+          </vs-col>
 
-          <vs-td :data="data[indextr].first_name">
+          <vs-col vs-w="3" :data="data[indextr].first_name">
             {{data[indextr].first_name}}
-          </vs-td>
+          </vs-col>
 
-          <vs-td :data="data[indextr].last_name">
+          <vs-col vs-w="3" :data="data[indextr].last_name">
             {{data[indextr].last_name}}
-          </vs-td>
+          </vs-col>
           
           <template class="expand-user" slot="expand">
             <div class="con-expand-users">
@@ -46,49 +46,50 @@
                       </h3>
                     </template>
                     <template slot="thead">
-                      <vs-th>
+                      <vs-col vs-w="2">
                         Title
-                      </vs-th>
-                      <vs-th>
+                      </vs-col>
+                      <vs-col vs-w="3">
                         Description
-                      </vs-th>
-                      <vs-th>
+                      </vs-col>
+                      <vs-col vs-w="1">
                         Release year
-                      </vs-th>
-                      <vs-th>
+                      </vs-col>
+                      <vs-col vs-w="1">
                         Rating
-                      </vs-th>
-                      <vs-th>
+                      </vs-col>
+                      <vs-col vs-w="2">
                         Special features
-                      </vs-th>
-                      <vs-th>
+                      </vs-col>
+                      <vs-col vs-w="2">
                         Length
-                      </vs-th>
+                      </vs-col>
+                      <br>
                     </template>
 
                     <template slot-scope="{data}">
-                      <vs-tr :key="indextr" v-for="(tr, indextr) in data" >
-                        <vs-td :data="data[indextr].title">
+                      <vs-tr :key="indextr" v-for="(tr, indextr) in data">
+                        <vs-col vs-w="2" :data="data[indextr].title">
                           {{data[indextr].title}}
-                        </vs-td>
+                        </vs-col>
 
-                        <vs-td :data="data[indextr].description">
+                        <vs-col vs-w="3" :data="data[indextr].description">
                           {{data[indextr].description}}
-                        </vs-td>
+                        </vs-col>
 
-                        <vs-td :data="data[indextr].release_year">
+                        <vs-col vs-w="1" :data="data[indextr].release_year">
                           {{data[indextr].release_year}}
-                        </vs-td>
+                        </vs-col>
 
-                        <vs-td :data="data[indextr].rating">
+                        <vs-col vs-w="1" :data="data[indextr].rating">
                           {{data[indextr].rating}}
-                        </vs-td>
-                        <vs-td :data="data[indextr].special_features">
+                        </vs-col>
+                        <vs-col  vs-w="2 " :data="data[indextr].special_features">
                           {{data[indextr].special_features}}
-                        </vs-td>
-                        <vs-td :data="data[indextr].length">
+                        </vs-col>
+                        <vs-col vs-w="2" :data="data[indextr].length">
                           {{data[indextr].length}}
-                        </vs-td>
+                        </vs-col>
                       </vs-tr>
                     </template>
                   </vs-table>
@@ -177,4 +178,19 @@ export default {
   .list-icon
     i
       font-size .9rem !important
+.vs-table--tbody-table tr {
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+}
+.vs-col{
+  padding-top:10px !important;
+}
+.vs-tabs--content {
+  align:center;
+  width:800px;
+  float:center;
+}
 </style>

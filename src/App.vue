@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <div class="title">
+      Taller de Bases de Datos
+    </div>
     <tabs/>
   </div>
 </template>
@@ -22,6 +25,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  float:center;
   margin-top: 60px;
+}
+#title{
+  font-size:24px;
+  width: 300px;
+  float:center;
+
 }
 </style>
