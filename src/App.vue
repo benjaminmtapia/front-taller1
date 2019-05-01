@@ -1,25 +1,16 @@
 <template>
   <div id="app">
-    <listActors/>
-    <postActor/>
+    <tabs/>
   </div>
 </template>
 
 <script>
-import Vue from 'vue'
-import Vuesax from 'vuesax'
-import 'vuesax/dist/vuesax.css' //Vuesax styles
-import 'material-icons/iconfont/material-icons.css';
-Vue.use(Vuesax)
-
-import listActors from './components/listActors.vue'
-import postActor from './components/postActor.vue'
+import tabs from './components/tabs.vue'
 
 export default {
   name: 'app',
   components: {
-    listActors,
-    postActor
+    tabs
   }
 }
 </script>

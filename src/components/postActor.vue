@@ -6,7 +6,6 @@
     <input type="text" class="form-control" v-model="last_name" placeholder="Apellido">
     <br>
     <vs-button color="success" type="gradient" @click="postActor">Crear</vs-button>
-    
   </div>
 </template>
 
