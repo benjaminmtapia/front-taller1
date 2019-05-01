@@ -7,13 +7,13 @@
         </h3>
       </template>
       <template slot="thead">
-        <vs-col vs-w="2">
+        <vs-col vs-w="2" style="font-weight: bold; font-size: 20px;">
           #
         </vs-col>
-        <vs-col vs-w="3">
+        <vs-col vs-w="3" style="font-weight: bold; font-size: 20px;">
           First name
         </vs-col>
-        <vs-col vs-w="3">
+        <vs-col vs-w="3" style="font-weight: bold; font-size: 20px;">
           Last name
         </vs-col>
       </template>
